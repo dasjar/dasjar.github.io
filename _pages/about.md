@@ -10,7 +10,7 @@ redirect_from:
 
 
 
-![Illustration of combining vision and language modalities](/images/ts.jpg){: .align-right width="300px"}
+![Illustration of combining vision and language modalities](/images/mvts.jpg){: .align-right width="300px"}
 👨🏻‍💻 I'm a PhD student at Georgia State University.
 
 🔬 My research interests are in Time Series Mining and Solarflare Prediction.
