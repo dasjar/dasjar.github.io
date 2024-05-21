@@ -5,7 +5,7 @@ main:
     url: /files/real_resume.pdf
 
   - title: "Portfolio"
-    url: /portfolio/
+    #url: /portfolio/
   
   - title: "Journal"
     url: /journal/
