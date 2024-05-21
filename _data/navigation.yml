@@ -8,7 +8,8 @@ main:
     #url: /portfolio/
   
   - title: "Journal"
-    url: /_pages/wavelet.md
+    url: /journal/
+    
   # - title: "Publications"
   #   url: /publications/
   #   # url: https://scholar.google.es/citations?user=xxxxxxxx=en
