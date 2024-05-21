@@ -4,6 +4,9 @@ title: "Journal"
 permalink: /journal/
 ---
 
+
+
+
 # Journal
 
 Welcome to my journal! Here you'll find various posts and thoughts on different topics.
@@ -13,5 +16,3 @@ Welcome to my journal! Here you'll find various posts and thoughts on different 
 Today, I am writing about...
 
 ## Post 2: Another Day, Another Entry
-
-Here's what happened today...
