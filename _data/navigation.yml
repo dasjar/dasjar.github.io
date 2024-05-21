@@ -2,7 +2,7 @@
 main:
   - title: "CV"
     # url: /cv/
-    url: /files/resume.pdf
+    url: "https://www.dasjar.github.io/files/resume.pdf"
 
   - title: "Portfolio"
     url: /portfolio/
