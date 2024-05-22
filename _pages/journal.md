@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Journal"
+author_profile: true
 permalink: /journal/
 ---
 
