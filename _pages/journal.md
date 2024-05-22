@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: archive
 title: "Journal"
 author_profile: true
 permalink: /journal/
