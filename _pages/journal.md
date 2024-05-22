@@ -1,10 +1,9 @@
 ---
 layout: archive
-title: "Journal"
+title: "Journal of Meetings with Dr. Rafal Angryk"
 author_profile: true
 permalink: /journal/
 ---
-
 
 
 
