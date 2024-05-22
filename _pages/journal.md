@@ -7,12 +7,12 @@ permalink: /journal/
 
 
 
-# Journal
+# Journal of TimeSeries Decomposition Leveraging Wavelet & Fourier Transforms
 
-Welcome to my journal! Here you'll find various posts and thoughts on different topics.
+Welcome to the journal for our project on solar flare prediction using time series decomposition with wavelets & fourier transforms. This journal documents the progress of our research, including the minutes and recordings of meetings, key discussions, and milestone achievements with Dr. Rafal Angryk.
 
-## Post 1: My First Entry
+## 05/17/24
 
 Today, I am writing about...
 
-## Post 2: Another Day, Another Entry
+## 05/21/24
