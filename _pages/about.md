@@ -10,7 +10,7 @@ redirect_from:
 
 
 ![Illustration of combining vision and language modalities](/images/side_img.png){: .align-right width="300px"}
-I'm a PhD student at Georgia State University. My research interests are in Time Series Mining and Solarflare Prediction.
+I'm a PhD, student at Georgia State University. My research interests are in Time Series Mining and Solarflare Prediction.
 
 I'm currently working towards a project to use wavelet and fourier transforms for decomposing time series to aid solar flare prediction. I am also interested in assisting others on their path in the world of Machine Learning and academia.
 <hr>
