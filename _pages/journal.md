@@ -22,9 +22,13 @@ Welcome to the journal for our project on solar flare prediction using time seri
  - The Gridsearch CV would be different for different persons but same for all the classifiers 
  - Make the evaluation step for all classifiers into a single one since they would be compared
  - Make the number of parameters for the 3 classiffiers to be same so they are comparable
+ - Can also design experiments to make the non-TSF classifier lossy or non lossy
 
-- **Decisions Made**: Outcomes and action items.
-- **Next Steps**: Plans for future work.
-- **Recordings**: Audio or video files of the meetings for reference.
+- **Decisions Made**:
+ - Improve on what was discussed
+
+- **Next Steps**:
+ - I am to work on the Normalization technique and the diagram
+
 
 ## 05/21/24
