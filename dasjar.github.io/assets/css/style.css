@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'IBM Plex Mono', monospace;
+  --font-serif: 'DM Serif Display', serif;
+
+  --bg-color: #1e1f21;
+  --header-bg: #2a2b2e;
+
+  --text-main: #e5e5e5;
+  --text-muted: #aaa;
+  --text-accent: #2bbbad;
+  --border-color: #333;
+  --frame-bg: #2e2f33;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 1.3rem;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 15px;
+}
+.nav-links li a:hover {
+  color: var(--text-accent);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px 40px;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.hero-text h1 {
+  font-size: 2.6rem;
+  font-family: var(--font-serif);
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.hero-text h2 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.hero-text p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+.hero-text a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+.hero-text a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section h3 {
+  font-size: 1.4rem;
+  color: var(--text-accent);
+  font-family: var(--font-serif);
+  margin-bottom: 10px;
+}
+
+.bio {
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 300px;
+}
+
+.left-column ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* CV Section */
+.cv-container {
+  position: relative;
+  background: var(--frame-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.cv-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+.cv-popout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+.cv-popout a {
+  color: var(--text-main);
+  font-size: 16px;
+}
+.cv-popout a:hover {
+  color: var(--text-accent);
+}
+
+/* SOCIAL */
+.social-links {
+  margin-top: 15px;
+}
+.social-links a {
+  font-size: 18px;
+  margin-right: 15px;
+  color: var(--text-muted);
+}
+.social-links a:hover {
+  color: var(--text-accent);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+  background-color: #1a1b1d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .two-column {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* publications page */
+/* PUBLICATIONS PAGE */
+.pub-header {
+  background-color: var(--header-bg);
+  color: var(--text-main);
+  padding: 40px 20px 20px;
+}
+.pub-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.pub-meta a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+.pub-meta a:hover {
+  text-decoration: underline;
+}
+.pub-heading {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-top: 20px;
+  color: var(--text-main);
+}
+.pub-listing {
+  background: #f5f5f5;
+  color: #222;
+  padding: 40px 20px;
+}
+.pub-card {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+.pub-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.pub-card h3 a {
+  color: #00695c;
+  text-decoration: none;
+}
+.pub-card h3 a:hover {
+  text-decoration: underline;
+}
+.pub-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* notes page  */
+/* NOTES PAGE */
+.note-entry {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.note-entry h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.note-entry p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* about page */
+.about-hero {
+  background-color: #1b1b1d;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.about-hero .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.about-hero .intro-text h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.about-hero .intro-text p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.about-hero .intro-text a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.about-content {
+  background-color: #f4f4f4;
+  color: #111;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}

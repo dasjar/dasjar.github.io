@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes | Victor Solomon</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="nav-icon" title="Home">
+      <i class="fas fa-user-astronaut"></i>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="notes.html">Notes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="pub-header">
+  <div class="container">
+    <h1 class="pub-heading">Research Notes & Meetings</h1>
+    <p class="pub-meta">Quick summaries, research logs, and daily progress entries.</p>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="container pub-listing">
+
+  <div class="note-entry">
+    <h3>🗓 July 3, 2025</h3>
+    <p>
+      - Finalized layout for publications and notes page.<br>
+      - Implemented CV viewer pop icon.<br>
+      - Discussed dark mode styling and font tweaks with ChatGPT.<br>
+      - TODO: Begin integrating RDANet write-up and figure captions.
+    </p>
+  </div>
+
+  <div class="note-entry">
+    <h3>🗓 July 2, 2025</h3>
+    <p>
+      - Successfully styled index page with dark theme and modern layout.<br>
+      - Created navigation bar and adjusted icon.<br>
+      - Improved section spacing, added profile and bio.
+    </p>
+  </div>
+
+  <!-- Add more <div class="note-entry"> for new days -->
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; <span id="year"></span> Victor Solomon. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
