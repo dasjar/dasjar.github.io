@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Victor Solomon",
+  description = "PhD student in Computer Science building machine learning methods for multimodal fusion, representation learning, scientific AI, and brain research."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="brand-symbol">VS</span>
+      </a>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/research">Research</a>
+        <a href="/projects">Projects</a>
+        <a href="/publications">Publications</a>
+        <a href="/notes">Notes</a>
+        <a href="/cv">CV</a>
+      </nav>
+
+      <div class="topbar-counter">
+        <span>visits</span>
+        <img src="https://hits.sh/dasjar.github.io.svg?style=flat-square&label=site&color=2f2f2f&labelColor=2f2f2f" alt="visitor count" />
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="footer">
+      <p>Victor Solomon · Machine Learning · Multimodal Fusion · Scientific AI · Brain Research</p>
+    </footer>
+  </body>
+</html>
