@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="CV | Victor Solomon">
+  <main class="light-page cv-page">
+    <section class="light-hero split-hero">
+      <div>
+        <div class="light-kicker">Curriculum Vitae</div>
+        <h1>Academic profile and research record.</h1>
+      </div>
+
+      <p>
+        A structured CV page with a compact summary and a clickable PDF preview.
+        The full document is available for viewing or download.
+      </p>
+    </section>
+
+    <section class="light-section cv-layout">
+      <div class="cv-summary-panel">
+        <div class="cv-summary-block">
+          <span>Current</span>
+          <h2>PhD Student in Computer Science</h2>
+          <p>Georgia State University. Research in machine learning, multimodal fusion, scientific AI, and brain research.</p>
+        </div>
+
+        <div class="cv-summary-block">
+          <span>Highlights</span>
+          <ul>
+            <li>Multimodal machine learning research</li>
+            <li>Scientific AI and representation learning</li>
+            <li>Brain research applications</li>
+            <li>Projects in fusion, dynamic systems, and time series</li>
+          </ul>
+        </div>
+
+        <div class="cv-actions-light">
+          <a href="/cv.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+          <a href="/cv.pdf" download>Download CV</a>
+        </div>
+      </div>
+
+      <a class="cv-document-preview" href="/cv.pdf" target="_blank" rel="noreferrer">
+        <div class="cv-document-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <iframe
+          src="/cv.pdf#toolbar=0&navpanes=0&page=1&view=FitH"
+          title="Victor Solomon CV"
+        ></iframe>
+
+        <div class="cv-document-overlay">click to open full CV</div>
+      </a>
+    </section>
+  </main>
+</BaseLayout>
