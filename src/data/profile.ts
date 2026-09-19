@@ -13,7 +13,7 @@ export const profile = {
   github: "https://github.com/dasjar",
   linkedin: "https://www.linkedin.com/in/vicsol/",
   researchGate: "https://www.researchgate.net/profile/Victor-Solomon-4?ev=hdr_xprf",
-  cv: "/cv.pdf",
+  cv: "/victor-solomon-cv-2026.pdf",
   summary: [
     "Hi, I am Victor. I am a Ph.D. candidate in Computer Science at Georgia State University, advised by Dr. Jingyu Liu and affiliated with the Center for Translational Research in Neuroimaging and Data Science.",
     "My research focuses on multimodal learning, representation learning, machine learning, scientific AI, and biomedical imaging, with applications to neurodegenerative diseases and complex brain disorders. I build learning systems that integrate heterogeneous data sources, learn robust and interpretable representations, and support scientific discovery in high dimensional biomedical and scientific data."
