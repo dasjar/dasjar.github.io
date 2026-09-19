@@ -15,6 +15,7 @@ const {
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="preload" as="image" href="/images/profile-optimized.webp" type="image/webp" />
   </head>
 
   <body>
@@ -33,7 +34,7 @@ const {
 
     <footer class="footer">
       <div class="footer-inner">
-        <p>© 2026 Victor Solomon. Built with Astro and hosted on GitHub Pages.</p>
+        <p>Â© 2026 Victor Solomon. Built with Astro and hosted on GitHub Pages.</p>
         <a href={`mailto:${profile.email}`}>{profile.email}</a>
       </div>
     </footer>

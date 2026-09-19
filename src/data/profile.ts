@@ -6,7 +6,7 @@ export const profile = {
   location: "Atlanta, GA",
   center: "TReNDS Center",
   advisor: "Dr. Jingyu Liu",
-  photo: "/images/profile.png",
+  photo: "/images/profile-optimized.webp",
   email: "vsolomon3@student.gsu.edu",
   website: "https://sites.google.com/view/dmlab/team/victor-solomon",
   scholar: "https://scholar.google.com/citations?user=y6b1SQEAAAAJ&hl=en",

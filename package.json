@@ -7,5 +7,7 @@
   "dependencies": {
     "astro": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
 }
