@@ -1,300 +1,132 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile, news, publications } from "../data/profile";
+
+const featuredPublications = publications;
 ---
 
-<BaseLayout title="Victor Solomon | Scientific Machine Learning Researcher">
-  <main>
-    <section class="hero">
-      <div class="orbit-field">
-        <div class="orbit-frame one"></div>
-        <div class="orbit-frame two"></div>
-        <div class="orbit-frame three"></div>
-        <div class="orbit-frame four"></div>
+<BaseLayout title="Victor Solomon | Scientific Machine Learning">
+  <main class="site-main home-page">
+    <section class="intro-section" id="about">
+      <div class="intro-copy">
+        <h1>{profile.name}</h1>
 
-        <div class="float-node a"></div>
-        <div class="float-node b"></div>
-        <div class="float-node c blue"></div>
-        <div class="float-node d blue"></div>
-        <div class="float-node white" style="left: 41%; top: 31%;"></div>
-        <div class="float-node white" style="right: 32%; bottom: 34%;"></div>
+        <p class="identity-line">
+          <span>{profile.affiliation}</span> {profile.role}
+        </p>
 
-        <div class="float-line a"></div>
-        <div class="float-line b"></div>
-        <div class="float-line c"></div>
-      </div>
+        {profile.summary.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
 
-      <div class="hero-center">
-        <img class="hero-photo" src="/images/profile.png" alt="Victor Solomon profile photo" />
+        <p>
+          Feel free to reach me at:
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        </p>
 
-        <div class="hero-name-block">
-          <h1 class="hero-name"><span class="initial">V</span>ictor<br /><span class="initial">S</span>olomon</h1>
-
-          <p class="hero-role">
-            PhD Student<br />
-            <span>Department of Computer Science</span><br />
-            <span>Georgia State University</span>
-          </p>
-
-          <p class="hero-lab">
-            Machine Learning · Multimodal Fusion · Scientific AI
-          </p>
-
-          <p class="hero-summary">
-            I build methods for multimodal fusion, representation learning, foundation models,
-            and interpretable scientific machine learning, with applications in brain research.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button primary" href="#selected-work">Projects</a>
-            <a class="button" href="/publications">Publications</a>
-
-            <a class="button icon-only" href="mailto:vsolomon3@student.gsu.edu" aria-label="Email">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 6h16v12H4z"></path>
-                <path d="m4 7 8 6 8-6"></path>
-              </svg>
-            </a>
-
-            <a class="button icon-only" href="https://github.com/dasjar" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.75-.24.75-.53v-2c-3.05.66-3.7-1.3-3.7-1.3-.5-1.25-1.2-1.58-1.2-1.58-.98-.67.07-.66.07-.66 1.08.08 1.65 1.12 1.65 1.12.96 1.64 2.52 1.17 3.13.9.1-.7.38-1.17.68-1.44-2.43-.28-5-1.22-5-5.42 0-1.2.43-2.18 1.12-2.95-.11-.28-.49-1.4.11-2.91 0 0 .92-.3 3 1.12a10.3 10.3 0 0 1 5.47 0c2.08-1.42 3-1.12 3-1.12.6 1.51.22 2.63.11 2.91.7.77 1.12 1.75 1.12 2.95 0 4.21-2.57 5.13-5.02 5.4.39.34.73 1 .73 2.02v3c0 .29.2.64.76.53A11.1 11.1 0 0 0 12 .9Z"></path>
-              </svg>
-            </a>
-
-            <a class="button icon-only" href="#" aria-label="Google Scholar">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 10 12 5l9 5-9 5-9-5Z"></path>
-                <path d="M7 12v4c2.9 2 7.1 2 10 0v-4"></path>
-              </svg>
-            </a>
-
-            <a class="button icon-only" href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6.5 9.5V19"></path>
-                <path d="M6.5 6.5v.1"></path>
-                <path d="M11 19v-5.2c0-2.7 5.5-3.2 5.5 0V19"></path>
-              </svg>
-            </a>
-          </div>
+        <div class="intro-actions">
+          <a href="#publications">publications</a>
+          <a href={profile.cv} target="_blank" rel="noreferrer">CV</a>
         </div>
-
-        <aside class="hero-cv">
-          <div class="hero-cv-head">
-            <div class="hero-cv-label">CV Preview</div>
-            <a class="hero-cv-open" href="/cv.pdf" target="_blank" rel="noreferrer">open full</a>
-          </div>
-
-          <a class="hero-cv-card" href="/cv.pdf" target="_blank" rel="noreferrer" aria-label="Open full CV">
-            <div class="hero-cv-bar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="hero-cv-frame-wrap">
-              <iframe
-                class="hero-cv-frame"
-                src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0&page=1&view=FitH"
-                title="Victor Solomon CV preview"
-              ></iframe>
-            </div>
-
-            <div class="hero-cv-overlay">
-              <span>click to open full CV</span>
-            </div>
-          </a>
-        </aside>
       </div>
 
-      <a class="scroll-cue" href="#research-focus" aria-label="Scroll to research focus"></a>
+      <aside class="portrait-wrap">
+        <img src={profile.photo} alt="Victor Solomon profile photo" />
+      </aside>
     </section>
 
-    <section id="research-focus" class="research-compact">
-      <div class="section-inner compact-inner">
-        <div class="compact-header">
-          <div>
-            <div class="section-label">Research Focus</div>
-            <h2 class="compact-title">Methods first. Scientific impact second.</h2>
-          </div>
+    <section class="content-section">
+      <h2>news</h2>
 
-          <p class="compact-core">
-            Scientific data is rarely clean, balanced, or single modal. I study how learning systems
-            align heterogeneous sources, discover reusable structure, and remain interpretable enough
-            to support scientific reasoning.
-          </p>
-        </div>
-
-        <div class="compact-grid">
-          <article class="compact-item">
-            <span class="compact-no">01</span>
-            <h3>Multimodal fusion and alignment</h3>
-            <p>Learning representations that connect heterogeneous views without one modality dominating the shared solution.</p>
+      <div class="news-list">
+        {news.map((item) => (
+          <article class="news-item">
+            <time>{item.date}</time>
+            <p>
+              {item.text}
+            </p>
           </article>
-
-          <article class="compact-item">
-            <span class="compact-no">02</span>
-            <h3>Interpretable representation learning</h3>
-            <p>Designing latent variable models, deep models, and hybrid systems that make learned structure inspectable.</p>
-          </article>
-
-          <article class="compact-item">
-            <span class="compact-no">03</span>
-            <h3>Foundation models for scientific data</h3>
-            <p>Adapting large representation models to specialized scientific domains where labels are limited and structure matters.</p>
-          </article>
-
-          <article class="compact-item">
-            <span class="compact-no">04</span>
-            <h3>Time series and dynamic systems</h3>
-            <p>Modeling temporal signals, state changes, and evolving patterns in complex scientific systems.</p>
-          </article>
-        </div>
+        ))}
       </div>
     </section>
 
-    <section id="selected-work" class="work-section">
-      <div class="section-inner">
-        <div class="section-label">Selected Work</div>
-        <h2 class="section-title">Research systems and methods.</h2>
-
-        <div class="work-accordion">
-          <details class="project-item">
-            <summary class="project-summary">
-              <div class="project-no">01</div>
-
-              <div class="project-main">
-                <h3>Progressive Multimodal Subspace Fusion</h3>
-                <p>
-                  A staged fusion method for learning from heterogeneous modalities without forcing
-                  all views into a single uniform solution.
-                </p>
-              </div>
-
-              <div class="project-side">
-                <div class="project-cue">expand project</div>
-                <div class="project-chip-row">
-                  <span class="project-chip">multimodal fusion</span>
-                  <span class="project-chip">representation learning</span>
-                </div>
-              </div>
-            </summary>
-
-            <div class="project-details">
-              <div class="project-detail-grid">
-                <div class="project-block">
-                  <h4>Method</h4>
-                  <p>Progressive independent vector analysis with staged anchoring and multimodal coupling.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Problem</h4>
-                  <p>How to fuse aligned and weakly aligned data sources without domination by the strongest view.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Application</h4>
-                  <p>Brain research and multimodal biomedical representation learning.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Links</h4>
-                  <p><a href="#">Google Scholar</a><br /><a href="#">Project Page</a><br /><a href="#">Code Repository</a></p>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-item">
-            <summary class="project-summary">
-              <div class="project-no">02</div>
-
-              <div class="project-main">
-                <h3>State aware structural dynamic fusion</h3>
-                <p>
-                  A framework for connecting stable structure with dynamic patterns in complex biological systems.
-                </p>
-              </div>
-
-              <div class="project-side">
-                <div class="project-cue">expand project</div>
-                <div class="project-chip-row">
-                  <span class="project-chip">dynamic systems</span>
-                  <span class="project-chip">scientific modeling</span>
-                </div>
-              </div>
-            </summary>
-
-            <div class="project-details">
-              <div class="project-detail-grid">
-                <div class="project-block">
-                  <h4>Method</h4>
-                  <p>State aware fusion with shared structural factors and state specific residual pathways.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Problem</h4>
-                  <p>How to compare dynamic states while preserving a shared interpretable structural basis.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Application</h4>
-                  <p>Brain connectivity, dynamic systems, and interpretable scientific modeling.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Links</h4>
-                  <p><a href="#">Google Scholar</a><br /><a href="#">Project Page</a><br /><a href="#">Code Repository</a></p>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-item">
-            <summary class="project-summary">
-              <div class="project-no">03</div>
-
-              <div class="project-main">
-                <h3>Mutual information guided time series models</h3>
-                <p>
-                  Representation learning for temporal data using dependence structure rather than only raw prediction loss.
-                </p>
-              </div>
-
-              <div class="project-side">
-                <div class="project-cue">expand project</div>
-                <div class="project-chip-row">
-                  <span class="project-chip">time series</span>
-                  <span class="project-chip">scientific ai</span>
-                </div>
-              </div>
-            </summary>
-
-            <div class="project-details">
-              <div class="project-detail-grid">
-                <div class="project-block">
-                  <h4>Method</h4>
-                  <p>Temporal projection, connectivity construction, marginal sampling, and flexible classifier families.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Problem</h4>
-                  <p>How to learn discriminative temporal representations from noisy multichannel signals.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Application</h4>
-                  <p>Scientific time series, neuroimaging signals, and representation learning benchmarks.</p>
-                </div>
-
-                <div class="project-block">
-                  <h4>Links</h4>
-                  <p><a href="#">Google Scholar</a><br /><a href="#">Project Page</a><br /><a href="#">Code Repository</a></p>
-                </div>
-              </div>
-            </div>
-          </details>
-        </div>
+    <section class="content-section" id="publications">
+      <div class="section-title-row">
+        <h2>selected publications</h2>
       </div>
+
+      <div class="publication-list compact">
+        {featuredPublications.map((pub) => (
+          <article class="publication-card">
+            <div class={`pub-thumb pub-thumb-${pub.placeholder.toLowerCase().replace(/\s+/g, "-")}`}>
+              {pub.image ? (
+                <img src={pub.image} alt={`${pub.title} thumbnail`} />
+              ) : (
+                <span>{pub.placeholder}</span>
+              )}
+            </div>
+
+            <div class="pub-body">
+              <h3>{pub.title}</h3>
+              <p class="pub-authors">{pub.authors}</p>
+              <p class="pub-venue">{pub.venue}, {pub.year}</p>
+
+              <div class="link-row">
+                {pub.links.map((link) => (
+                  <a href={link.url} target={link.url.startsWith("http") ? "_blank" : "_self"} rel="noreferrer">{link.label}</a>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+                    <section class="contact-strip" aria-label="Contact links">
+      <a href={profile.cv} target="_blank" rel="noreferrer" aria-label="CV" title="CV" class="contact-logo cv-logo">
+        <span>CV</span>
+      </a>
+
+      <a href={`mailto:${profile.email}`} aria-label="Email" title="Email" class="contact-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="8" y="16" width="48" height="34" rx="3"></rect>
+          <path d="M10 18 32 36 54 18"></path>
+        </svg>
+      </a>
+
+      <a href={profile.scholar} target="_blank" rel="noreferrer" aria-label="Google Scholar" title="Google Scholar" class="contact-logo scholar-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <text x="13" y="45" font-size="44" font-family="Georgia, Times New Roman, serif" font-weight="500">g</text>
+          <path d="M39 16 58 26 39 36 20 26 39 16Z"></path>
+          <path d="M47 32v9"></path>
+          <circle cx="47" cy="45" r="2.2"></circle>
+        </svg>
+      </a>
+
+      <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn" class="contact-logo linkedin-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="9" y="9" width="46" height="46" rx="4"></rect>
+          <rect x="18" y="26" width="7" height="21"></rect>
+          <circle cx="21.5" cy="19" r="4"></circle>
+          <path d="M32 26h7v3.1c1.1-1.9 3.5-3.8 7.1-3.8 6.1 0 7.2 4 7.2 9.4V47h-7V36.1c0-2.6 0-5.9-3.6-5.9-3.7 0-4.2 2.8-4.2 5.7V47H32Z"></path>
+        </svg>
+      </a>
+
+      <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub" class="contact-logo github-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 7.5a24.5 24.5 0 0 0-7.7 47.8c1.2.2 1.6-.5 1.6-1.1v-4.4c-6.7 1.5-8.1-2.9-8.1-2.9-1.1-2.8-2.7-3.5-2.7-3.5-2.2-1.5.2-1.5.2-1.5 2.4.2 3.7 2.5 3.7 2.5 2.2 3.7 5.7 2.6 7.1 2 .2-1.6.8-2.6 1.5-3.2-5.3-.6-10.9-2.7-10.9-11.9 0-2.6.9-4.8 2.5-6.5-.3-.6-1.1-3.1.2-6.4 0 0 2-.7 6.7 2.5a23.3 23.3 0 0 1 12.2 0c4.7-3.2 6.7-2.5 6.7-2.5 1.3 3.3.5 5.8.2 6.4 1.6 1.7 2.5 3.9 2.5 6.5 0 9.3-5.6 11.3-11 11.9.9.8 1.7 2.3 1.7 4.6v6.8c0 .6.4 1.4 1.7 1.1A24.5 24.5 0 0 0 32 7.5Z"></path>
+        </svg>
+      </a>
+
+      <a href={profile.researchGate} target="_blank" rel="noreferrer" aria-label="ResearchGate" title="ResearchGate" class="contact-logo rg-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="7" y="7" width="50" height="50" rx="3"></rect>
+          <text x="13" y="43" font-size="34" font-family="Georgia, Times New Roman, serif" font-weight="600">R</text>
+          <text x="38" y="24" font-size="19" font-family="Georgia, Times New Roman, serif" font-weight="700">G</text>
+        </svg>
+      </a>
+
+      <p>{profile.contactLine}</p>
     </section>
   </main>
 </BaseLayout>
